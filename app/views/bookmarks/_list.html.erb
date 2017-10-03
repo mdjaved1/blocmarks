@@ -1,0 +1,11 @@
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading">
+        <% topic.bookmarks.each do |bookmark| %>
+        <%= bookmark.url %>
+        <%= link_to "Delete Bookmark", bookmark, method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure you want to delete this bookmark?" } %>
+        <%= link_to "Edit Bookmark", edit_bookmark_path(bookmark), class: 'btn btn-info' %>  <br>
+        <% end %>
+    </h4>
+  </div>
+</div>
