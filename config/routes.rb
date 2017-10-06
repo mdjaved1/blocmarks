@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:new, :index, :show]
-
-
+  
+  post :incoming, to: "incoming#create"
+  
   get 'welcome/index'
 
   get 'welcome/about'
