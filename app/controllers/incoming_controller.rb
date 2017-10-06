@@ -8,6 +8,7 @@ class IncomingController < ApplicationController
     @topic = Topic.find_by(title: params["subject"])
     p @user
     p @topic
+    p params["body-plain"]
     @url = params["body-plain"]
 
     if @user.nil?
