@@ -13,7 +13,7 @@ class IncomingController < ApplicationController
 
     if @user.nil?
       puts "created user"
-      @user = User.create(email: params["sender"], password: '123')
+      @user = User.create(email: params["sender"], password: '1234567')
     end
 
     if @topic.nil?
